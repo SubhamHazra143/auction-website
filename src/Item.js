@@ -27,7 +27,7 @@ export default function Item() {
             {product.product_name}
           </h2>
           <p>{product.product_details}</p>
-          <div className='badge badge-accent'>English Auction</div>
+          <div className='badge badge-accent'>{product.bid_type}</div>
           <div>
             Bid Starting Price
             <div className='text-sky-400 text-3xl font-semibold'>
