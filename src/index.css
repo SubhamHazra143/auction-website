@@ -46,3 +46,15 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+/* Disabled Button */
+
+.disabled { 
+
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.4;
+
+}

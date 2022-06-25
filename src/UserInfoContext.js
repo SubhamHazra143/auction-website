@@ -47,6 +47,10 @@ export const UserInfoContextProvider = ({ children }) => {
 
       const walletSnapShot = await setDoc(walletRef, {
         total_amount: 0,
+        amount_in_auction :  0,
+        uid :  User.uid , 
+        remaining_amount : 0 ,
+        total_purchase : 0
       })
     } else {
       //For Existing User
@@ -68,7 +72,7 @@ export const UserInfoContextProvider = ({ children }) => {
       const walletSnap = await getDoc(walletRef)
       const walletData = walletSnap.data()
       setWallet((prevWallet) => {
-        return { ...prevWallet, total_amount: walletData.total_amount }
+        return { ...prevWallet, ...walletData}
       })
     }
   }
